@@ -5,10 +5,10 @@
         <q-list>
           <q-item>
             <q-item-section avatar>
-              <q-icon name="person" />
+              <q-img src="user.png" />
             </q-item-section>
-            <q-item-label class="text-h5 text-weight-bolder morabba text-white">
-              قبت نام مهمان فول استک 11
+            <q-item-label class="text-h4 text-weight-bolder morabba text-white">
+              ثبت نام مهمان فول استک 11
             </q-item-label>
           </q-item>
         </q-list>
