@@ -8,9 +8,9 @@
             <q-item-section avatar>
               <img src="signup.png" />
             </q-item-section>
-            <q-item-label class="text-h5 text-weight-bold morabba text-white">
+            <q-item-label class="text-h5 text-weight-light morabba text-white">
               ثبت نام مهمان فول استک
-              <span class="text-h4 text-black text-weight-bolder">11</span>
+              <span class="text-h4 text-black text-weight-bold iransans">11</span>
             </q-item-label>
           </q-item>
           <q-item>

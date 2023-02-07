@@ -17,6 +17,9 @@ export default defineComponent({
 .morabba {
   font-family: "Morabba" !important;
 }
+.iransans {
+  font-family: "IRANSansXFaNum" !important;
+}
 .r35 {
   border-radius: 35px;
   overflow: hidden!important;
