@@ -5,13 +5,16 @@
         <q-list>
           <q-item>
             <q-item-section avatar>
-              <q-img src="signup.png" />
+              <img src="signup.png" />
             </q-item-section>
-            <q-item-label class="text-h4 text-weight-bolder morabba text-white">
-              ثبت نام مهمان فول استک 11
+            <q-item-label class="text-h5 text-weight-bold morabba text-indigo-10 q-pt-sm">
+              ثبت نام مهمان فول استک <span class="text-h4 text-black text-weight-bolder">11</span>
             </q-item-label>
           </q-item>
         </q-list>
+      </q-card-section>
+      <q-card-section>
+        <q-input label="نام و نام خانوادگی" />
       </q-card-section>
     </q-card>
   </q-page>
