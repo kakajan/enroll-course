@@ -8,7 +8,7 @@
               <q-icon name="person" />
             </q-item-section>
             <q-item-label class="text-h5 text-weight-bolder morabba text-white">
-              فرم ثبت نام در جلسه اول
+              قبت نام مهمان فول استک 11
             </q-item-label>
           </q-item>
         </q-list>
