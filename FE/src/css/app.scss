@@ -1,1 +1,967 @@
-// app global css in SCSS form
+@charset "UTF-8";
+
+@font-face {
+  font-family: ArtinSharp;
+  font-style: normal;
+  font-weight: bold;
+  src: url("fonts/eot/Artin-Sharp-Bold.eot");
+  src: url("fonts/eot/Artin-Sharp-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/woff2/Artin-Sharp-Bold.woff2") format("woff2"), url("fonts/woff/Artin-Sharp-Bold.woff") format("woff"), url("fonts/ttf/Artin-Sharp-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: ArtinSharp;
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/eot/Artin-Sharp-Regular.eot");
+  src: url("fonts/eot/Artin-Sharp-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/woff2/Artin-Sharp-Regular.woff2") format("woff2"), url("fonts/woff/Artin-Sharp-Regular.woff") format("woff"), url("fonts/ttf/Artin-Sharp-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Artin;
+  font-style: normal;
+  font-weight: bold;
+  src: url("fonts/eot/Artin-Bold.eot");
+  src: url("fonts/eot/Artin-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/woff2/Artin-Bold.woff2") format("woff2"), url("fonts/woff/Artin-Bold.woff") format("woff"), url("fonts/ttf/Artin-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: Morabba;
+  font-style: normal;
+  font-weight: 200;
+  src: url('fonts-morabba/woff/Morabba-UltraLight.woff') format('woff'),
+    url('fonts-morabba/woff2/Morabba-UltraLight.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Morabba;
+  font-style: normal;
+  font-weight: 300;
+  src: url('fonts-morabba/woff/Morabba-light.woff') format('woff'),
+    url('fonts-morabba/woff2/Morabba-light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Morabba;
+  font-style: normal;
+  font-weight: 500;
+  src: url('fonts-morabba/woff/Morabba-medium.woff') format('woff'),
+    url('fonts-morabba/woff2/Morabba-medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Morabba;
+  font-style: normal;
+  font-weight: 600;
+  src: url('fonts-morabba/woff/Morabba-semibold.woff') format('woff'),
+    url('fonts-morabba/woff2/Morabba-semibold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Morabba;
+  font-style: normal;
+  font-weight: 800;
+  src: url('fonts-morabba/woff/Morabba-extrabold.woff') format('woff'),
+    url('fonts-morabba/woff2/Morabba-extrabold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Morabba;
+  font-style: normal;
+  font-weight: 850;
+  src: url('fonts-morabba/woff/Morabba-black.woff') format('woff'),
+    url('fonts-morabba/woff2/Morabba-black.woff2') format('woff2');
+}
+
+
+@font-face {
+  font-family: Morabba;
+  font-style: normal;
+  font-weight: 900;
+  src: url('fonts-morabba/woff/Morabba-Heavy.woff') format('woff'),
+    url('fonts-morabba/woff2/Morabba-Heavy.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Morabba;
+  font-style: normal;
+  font-weight: bold;
+  src: url('fonts-morabba/woff/Morabba-bold.woff') format('woff'),
+    url('fonts-morabba/woff2/Morabba-bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Morabba;
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts-morabba/woff/Morabba-regular.woff') format('woff'),
+    url('fonts-morabba/woff2/Morabba-regular.woff2') format('woff2');
+}
+
+
+
+/* فونت ایران سنس */
+@font-face {
+  font-family: IRANSansXFaNum;
+  font-style: normal;
+  font-weight: 100;
+  src: url('fonts/Woff/IRANSansXFaNum-thin.woff') format('woff'),
+    url('fonts/Woff2/IRANSansXFaNum-thin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: IRANSansXFaNum;
+  font-style: normal;
+  font-weight: 200;
+  src: url('fonts/Woff/IRANSansXFaNum-UltraLight.woff') format('woff'),
+    url('fonts/Woff2/IRANSansXFaNum-UltraLight.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: IRANSansXFaNum;
+  font-style: normal;
+  font-weight: 300;
+  src: url('fonts/Woff/IRANSansXFaNum-light.woff') format('woff'),
+    url('fonts/Woff2/IRANSansXFaNum-light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: IRANSansXFaNum;
+  font-style: normal;
+  font-weight: 500;
+  src: url('fonts/Woff/IRANSansXFaNum-medium.woff') format('woff'),
+    url('fonts/Woff2/IRANSansXFaNum-medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: IRANSansXFaNum;
+  font-style: normal;
+  font-weight: 600;
+  src: url('fonts/Woff/IRANSansXFaNum-demibold.woff') format('woff'),
+    url('fonts/Woff2/IRANSansXFaNum-demibold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: IRANSansXFaNum;
+  font-style: normal;
+  font-weight: 800;
+  src: url('fonts/Woff/IRANSansXFaNum-extrabold.woff') format('woff'),
+    url('fonts/Woff2/IRANSansXFaNum-extrabold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: IRANSansXFaNum;
+  font-style: normal;
+  font-weight: 900;
+  src: url('fonts/Woff/IRANSansXFaNum-black.woff') format('woff'),
+    url('fonts/Woff2/IRANSansXFaNum-black.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: IRANSansXFaNum;
+  font-style: normal;
+  font-weight: bold;
+  src: url('fonts/Woff/IRANSansXFaNum-bold.woff') format('woff'),
+    url('fonts/Woff2/IRANSansXFaNum-bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: IRANSansXFaNum;
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/Woff/IRANSansXFaNum-regular.woff') format('woff'),
+    url('fonts/Woff2/IRANSansXFaNum-regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 900;
+  src: url("fonts/eot/IRANSansWeb_Black.eot");
+  src: url("fonts/eot/IRANSansWeb_Black.eot?#iefix") format("embedded-opentype"), url("fonts/woff2/IRANSansWeb_Black.woff2") format("woff2"), url("fonts/woff/IRANSansWeb_Black.woff") format("woff"), url("fonts/ttf/IRANSansWeb_Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: bold;
+  src: url("fonts/eot/IRANSansWeb_Bold.eot");
+  src: url("fonts/eot/IRANSansWeb_Bold.eot?#iefix") format("embedded-opentype"), url("fonts/woff2/IRANSansWeb_Bold.woff2") format("woff2"), url("fonts/woff/IRANSansWeb_Bold.woff") format("woff"), url("fonts/ttf/IRANSansWeb_Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 500;
+  src: url("fonts/eot/IRANSansWeb_Medium.eot");
+  src: url("fonts/eot/IRANSansWeb_Medium.eot?#iefix") format("embedded-opentype"), url("fonts/woff2/IRANSansWeb_Medium.woff2") format("woff2"), url("fonts/woff/IRANSansWeb_Medium.woff") format("woff"), url("fonts/ttf/IRANSansWeb_Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 300;
+  src: url("fonts/eot/IRANSansWeb_Light.eot");
+  src: url("fonts/eot/IRANSansWeb_Light.eot?#iefix") format("embedded-opentype"), url("fonts/woff2/IRANSansWeb_Light.woff2") format("woff2"), url("fonts/woff/IRANSansWeb_Light.woff") format("woff"), url("fonts/ttf/IRANSansWeb_Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 200;
+  src: url("fonts/eot/IRANSansWeb_UltraLight.eot");
+  src: url("fonts/eot/IRANSansWeb_UltraLight.eot?#iefix") format("embedded-opentype"), url("fonts/woff2/IRANSansWeb_UltraLight.woff2") format("woff2"), url("fonts/woff/IRANSansWeb_UltraLight.woff") format("woff"), url("fonts/ttf/IRANSansWeb_UltraLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/eot/IRANSansWeb.eot");
+  src: url("fonts/eot/IRANSansWeb.eot?#iefix") format("embedded-opentype"), url("fonts/woff2/IRANSansWeb.woff2") format("woff2"), url("fonts/woff/IRANSansWeb.woff") format("woff"), url("fonts/ttf/IRANSansWeb.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'fontello';
+  src: url("fonts/fontello.eot?2075807");
+  src: url("fonts/fontello.eot?2075807#iefix") format("embedded-opentype"),
+  url("fonts/fontello.woff2?2075807") format("woff2"),
+  url("fonts/fontello.woff?2075807") format("woff"),
+  url("fonts/fontello.ttf?2075807") format("truetype"),
+  url("fonts/fontello.svg?2075807#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url("fonts/fontello.svg?2075807#fontello") format("svg");
+  }
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes */
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: 0.2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-emo-happy:before {
+  content: '\e800';
+}
+
+/* '' */
+.icon-emo-wink:before {
+  content: '\e801';
+}
+
+/* '' */
+.icon-emo-unhappy:before {
+  content: '\e802';
+}
+
+/* '' */
+.icon-emo-sleep:before {
+  content: '\e803';
+}
+
+/* '' */
+.icon-emo-thumbsup:before {
+  content: '\e804';
+}
+
+/* '' */
+.icon-bazarita:before {
+  content: '\e805';
+}
+
+/* '' */
+.icon-wallet:before {
+  content: '\e806';
+}
+
+/* '' */
+.icon-emo-tongue:before {
+  content: '\e807';
+}
+
+/* '' */
+.icon-emo-coffee:before {
+  content: '\e808';
+}
+
+/* '' */
+.icon-emo-sunglasses:before {
+  content: '\e809';
+}
+
+/* '' */
+.icon-emo-displeased:before {
+  content: '\e80a';
+}
+
+/* '' */
+.icon-walletopen:before {
+  content: '\e80b';
+}
+
+/* '' */
+.icon-emo-grin:before {
+  content: '\e80c';
+}
+
+/* '' */
+.icon-emo-angry:before {
+  content: '\e80d';
+}
+
+/* '' */
+.icon-emo-saint:before {
+  content: '\e80e';
+}
+
+/* '' */
+.icon-emo-cry:before {
+  content: '\e80f';
+}
+
+/* '' */
+.icon-presenter:before {
+  content: '\e810';
+}
+
+/* '' */
+.icon-emo-squint:before {
+  content: '\e811';
+}
+
+/* '' */
+.icon-emo-laugh:before {
+  content: '\e812';
+}
+
+/* '' */
+.icon-emo-wink2:before {
+  content: '\e813';
+}
+
+/* '' */
+.icon-inbox:before {
+  content: '\e814';
+}
+
+/* '' */
+.icon-brifcase:before {
+  content: '\e815';
+}
+
+/* '' */
+.icon-window:before {
+  content: '\e816';
+}
+
+/* '' */
+.icon-layout:before {
+  content: '\e817';
+}
+
+/* '' */
+.icon-layout6:before {
+  content: '\e818';
+}
+
+/* '' */
+.icon-gift:before {
+  content: '\e819';
+}
+
+/* '' */
+.icon-lamp:before {
+  content: '\e81a';
+}
+
+/* '' */
+.icon-wifi:before {
+  content: '\e81b';
+}
+
+/* '' */
+.icon-piner:before {
+  content: '\e81c';
+}
+
+/* '' */
+.icon-medal:before {
+  content: '\e81d';
+}
+
+/* '' */
+.icon-besher:before {
+  content: '\e81e';
+}
+
+/* '' */
+.icon-code:before {
+  content: '\e81f';
+}
+
+/* '' */
+.icon-scroll:before {
+  content: '\e820';
+}
+
+/* '' */
+.icon-case:before {
+  content: '\e821';
+}
+
+/* '' */
+.icon-computer:before {
+  content: '\e822';
+}
+
+/* '' */
+.icon-monitor:before {
+  content: '\e823';
+}
+
+/* '' */
+.icon-proud:before {
+  content: '\e824';
+}
+
+/* '' */
+.icon-oops:before {
+  content: '\e825';
+}
+
+/* '' */
+.icon-barcode:before {
+  content: '\e826';
+}
+
+/* '' */
+.icon-note:before {
+  content: '\e827';
+}
+
+/* '' */
+.icon-blink:before {
+  content: '\e828';
+}
+
+/* '' */
+.icon-toung:before {
+  content: '\e829';
+}
+
+/* '' */
+.icon-image:before {
+  content: '\e82a';
+}
+
+/* '' */
+.icon-shot:before {
+  content: '\e82b';
+}
+
+/* '' */
+.icon-laph:before {
+  content: '\e82c';
+}
+
+/* '' */
+.icon-sad:before {
+  content: '\e82d';
+}
+
+/* '' */
+.icon-smile:before {
+  content: '\e82e';
+}
+
+/* '' */
+.icon-neutral:before {
+  content: '\e82f';
+}
+
+/* '' */
+.icon-spin1:before {
+  content: '\e830';
+}
+
+/* '' */
+.icon-switch:before {
+  content: '\e831';
+}
+
+/* '' */
+.icon-spin3:before {
+  content: '\e832';
+}
+
+/* '' */
+.icon-page:before {
+  content: '\e833';
+}
+
+/* '' */
+.icon-list:before {
+  content: '\e834';
+}
+
+/* '' */
+.icon-umbrella:before {
+  content: '\e835';
+}
+
+/* '' */
+.icon-save:before {
+  content: '\e836';
+}
+
+/* '' */
+.icon-jet:before {
+  content: '\e837';
+}
+
+/* '' */
+.icon-maximize:before {
+  content: '\e838';
+}
+
+/* '' */
+.icon-camera:before {
+  content: '\e839';
+}
+
+/* '' */
+.icon-message:before {
+  content: '\e83a';
+}
+
+/* '' */
+.icon-upload:before {
+  content: '\e83b';
+}
+
+/* '' */
+.icon-download:before {
+  content: '\e83c';
+}
+
+/* '' */
+.icon-bookmark:before {
+  content: '\e83d';
+}
+
+/* '' */
+.icon-pmbaloon:before {
+  content: '\e83e';
+}
+
+/* '' */
+.icon-emptypm:before {
+  content: '\e83f';
+}
+
+/* '' */
+.icon-firefox:before {
+  content: '\e840';
+}
+
+/* '' */
+.icon-chrome:before {
+  content: '\e841';
+}
+
+/* '' */
+.icon-opera:before {
+  content: '\e842';
+}
+
+/* '' */
+.icon-ie:before {
+  content: '\e843';
+}
+
+/* '' */
+.icon-crown:before {
+  content: '\e844';
+}
+
+/* '' */
+.icon-crown-plus:before {
+  content: '\e845';
+}
+
+/* '' */
+.icon-crown-minus:before {
+  content: '\e846';
+}
+
+/* '' */
+.icon-pmnote:before {
+  content: '\e847';
+}
+
+/* '' */
+.icon-bellring:before {
+  content: '\e848';
+}
+
+/* '' */
+.icon-time:before {
+  content: '\e849';
+}
+
+/* '' */
+.icon-share:before {
+  content: '\e84a';
+}
+
+/* '' */
+.icon-paper:before {
+  content: '\e84b';
+}
+
+/* '' */
+.icon-document:before {
+  content: '\e84c';
+}
+
+/* '' */
+.icon-copy:before {
+  content: '\e84d';
+}
+
+/* '' */
+.icon-clock:before {
+  content: '\e84e';
+}
+
+/* '' */
+.icon-heart:before {
+  content: '\e84f';
+}
+
+/* '' */
+.icon-pm:before {
+  content: '\e850';
+}
+
+/* '' */
+.icon-mail:before {
+  content: '\e851';
+}
+
+/* '' */
+.icon-person:before {
+  content: '\e852';
+}
+
+/* '' */
+.icon-trashfull:before {
+  content: '\e853';
+}
+
+/* '' */
+.icon-trash:before {
+  content: '\e854';
+}
+
+/* '' */
+.icon-identifier:before {
+  content: '\e855';
+}
+
+/* '' */
+.icon-timer:before {
+  content: '\e856';
+}
+
+/* '' */
+.icon-folder:before {
+  content: '\e857';
+}
+
+/* '' */
+.icon-locate:before {
+  content: '\e858';
+}
+
+/* '' */
+.icon-location:before {
+  content: '\e859';
+}
+
+/* '' */
+.icon-search:before {
+  content: '\e85a';
+}
+
+/* '' */
+.icon-cloud:before {
+  content: '\e85b';
+}
+
+/* '' */
+.icon-tag:before {
+  content: '\e85c';
+}
+
+/* '' */
+.icon-bell:before {
+  content: '\e85d';
+}
+
+/* '' */
+.icon-lock:before {
+  content: '\e85e';
+}
+
+/* '' */
+.icon-login:before {
+  content: '\e85f';
+}
+
+/* '' */
+.icon-star:before {
+  content: '\e860';
+}
+
+/* '' */
+.icon-ommit:before {
+  content: '\e861';
+}
+
+/* '' */
+.icon-tick:before {
+  content: '\e862';
+}
+
+/* '' */
+.icon-add:before {
+  content: '\e863';
+}
+
+/* '' */
+.icon-exit:before {
+  content: '\e864';
+}
+
+/* '' */
+.icon-unlock:before {
+  content: '\e865';
+}
+
+/* '' */
+.icon-basket:before {
+  content: '\e866';
+}
+
+/* '' */
+.icon-edit:before {
+  content: '\e867';
+}
+
+/* '' */
+.icon-cart:before {
+  content: '\e868';
+}
+
+/* '' */
+.icon-calendar:before {
+  content: '\e869';
+}
+
+/* '' */
+.icon-voldown:before {
+  content: '\e86a';
+}
+
+/* '' */
+.icon-previousmedia:before {
+  content: '\e86b';
+}
+
+/* '' */
+.icon-radio:before {
+  content: '\e86c';
+}
+
+/* '' */
+.icon-speacker:before {
+  content: '\e86d';
+}
+
+/* '' */
+.icon-stop:before {
+  content: '\e86e';
+}
+
+/* '' */
+.icon-replay:before {
+  content: '\e86f';
+}
+
+/* '' */
+.icon-caset:before {
+  content: '\e870';
+}
+
+/* '' */
+.icon-equlizer:before {
+  content: '\e871';
+}
+
+/* '' */
+.icon-soundon:before {
+  content: '\e872';
+}
+
+/* '' */
+.icon-music:before {
+  content: '\e873';
+}
+
+/* '' */
+.icon-media:before {
+  content: '\e874';
+}
+
+/* '' */
+.icon-micon:before {
+  content: '\e875';
+}
+
+/* '' */
+.icon-pause:before {
+  content: '\e876';
+}
+
+/* '' */
+.icon-pin:before {
+  content: '\e877';
+}
+
+/* '' */
+.icon-mute:before {
+  content: '\e878';
+}
+
+/* '' */
+.icon-play:before {
+  content: '\e879';
+}
+
+/* '' */
+.icon-nextmedia:before {
+  content: '\e87a';
+}
+
+/* '' */
+.icon-nosound:before {
+  content: '\e87b';
+}
+
+/* '' */
+.icon-stats:before {
+  content: '\e87c';
+}
+
+/* '' */
+.icon-visualizer:before {
+  content: '\e87d';
+}
+
+/* '' */
+.icon-video:before {
+  content: '\e87e';
+}
+
+/* '' */
+.icon-tv:before {
+  content: '\e87f';
+}
+
+/* '' */
+.icon-volup:before {
+  content: '\e880';
+}
+
+/* '' */
+.icon-micenabled:before {
+  content: '\e881';
+}
+
+/* '' */
+.icon-shuffle:before {
+  content: '\e882';
+}
+
+/* '' */
+.icon-mic:before {
+  content: '\e883';
+}
+
+/* '' */
+.icon-headset:before {
+  content: '\e884';
+}
+
+/* '' */
+.icon-repeat:before {
+  content: '\e885';
+}
+
+/* '' */
+.icon-next:before {
+  content: '\e886';
+}
+
+/* '' */
+.icon-previous:before {
+  content: '\e887';
+}
+
+/* '' */
+.icon-playon:before {
+  content: '\e888';
+}
+
+/* '' */
+.icon-palyer:before {
+  content: '\e889';
+}
+
+/* '' */
+.icon-emo-surprised:before {
+  content: '\e88a';
+}
+
+/* '' */
+.icon-spin2:before {
+  content: '\e88b';
+}
+
+/* '' */
