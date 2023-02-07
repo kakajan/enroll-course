@@ -1,8 +1,10 @@
 {
-	"folders": [
-		{
-			"path": "FE"
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "FE"
+    }
+  ],
+  "settings": {
+    "i18n-ally.localesPaths": ["src/i18n"]
+  }
 }

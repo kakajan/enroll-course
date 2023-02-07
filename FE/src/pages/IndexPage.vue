@@ -5,7 +5,7 @@
         <q-list>
           <q-item>
             <q-item-section avatar>
-              <q-img src="user.png" />
+              <q-img src="signup.png" />
             </q-item-section>
             <q-item-label class="text-h4 text-weight-bolder morabba text-white">
               ثبت نام مهمان فول استک 11
