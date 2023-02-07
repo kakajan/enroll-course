@@ -25,7 +25,7 @@ export default defineComponent({
   border-radius: 56px;
   overflow: hidden!important;
 }
-.bg-glass {
+.bg-glass{
   background: rgba(255, 255, 255, 0.21);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5.1px);
@@ -33,6 +33,9 @@ export default defineComponent({
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .q-field__label, .q-field--float .q-field__label{
-  color: white
+  color: rgb(43, 47, 87)
+}
+.q-field__messages div {
+  color: black!important;
 }
 </style>
