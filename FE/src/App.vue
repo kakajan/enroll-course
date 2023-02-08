@@ -15,8 +15,11 @@ body {
   overscroll-behavior-y: contain !important;
 }
 .bg {
-  background: url("bg.webp") no-repeat center top;
+  background:#28123b url("bg.webp") no-repeat center top;
   background-size: cover;
+}
+body {
+  background: #28123b
 }
 .morabba {
   font-family: "Morabba" !important;

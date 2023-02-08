@@ -1,11 +1,8 @@
 <template>
   <q-page class="flex flex-center bg">
-    <q-card class="r35 bg-glass">
-      <transition
-        name="fade"
-        mode="out-in"
-      >
-        <q-card-section key="form" v-if="!done" class="text-center scale">
+    <q-card class="r35 bg-glass scale">
+      <transition-group name="fade">
+        <q-card-section key="form" v-show="!done" class="text-center scale">
           <img style="height: 65px; margin-top: 25px" src="~assets/logo.svg" />
           <q-list>
             <q-item>
@@ -93,18 +90,36 @@
         </q-card-section>
         <q-card-section
           key="success"
-          v-else
+          v-show="doneWait"
           class="flex flex-center text-center scale"
         >
-          <lottie-player
-            src="https://assets3.lottiefiles.com/packages/lf20_z4bjtbpj.json"
-            background="transparent"
-            speed="0.9"
-            style="width: 300px; height: 300px"
-            autoplay
-          ></lottie-player>
+          <q-list>
+            <q-item>
+              <q-item-section class="q-gutter-y-sm">
+                <lottie-player
+                  src="https://assets3.lottiefiles.com/packages/lf20_z4bjtbpj.json"
+                  background="transparent"
+                  speed="0.9"
+                  style="width: 300px; height: 300px; margin-top: -90px"
+                  autoplay
+                ></lottie-player>
+                <h2 class="text-h6 text-white" style="margin-top: -90px">
+                  ثبت نام شما با موفقیت انجام شد!<br />
+                  اطلاعات ورود برایتان ارسال خواهد شد.
+                </h2>
+                <q-btn
+                  label="خروج"
+                  color="pink-7"
+                  class="full-width"
+                  rounded
+                  unelevated
+                  size="lg"
+                />
+              </q-item-section>
+            </q-item>
+          </q-list>
         </q-card-section>
-      </transition>
+      </transition-group>
     </q-card>
   </q-page>
 </template>
@@ -122,6 +137,7 @@ export default defineComponent({
     const nameRef = ref(null);
     const loading = ref(false);
     const done = ref(false);
+    const doneWait = ref(false);
     return {
       fullName,
       phone,
@@ -129,6 +145,7 @@ export default defineComponent({
       nameRef,
       loading,
       done,
+      doneWait,
       sendRequest() {
         loading.value = true;
         axios
@@ -139,6 +156,9 @@ export default defineComponent({
           .then((r) => {
             loading.value = false;
             done.value = true;
+            setTimeout(() => {
+              doneWait.value = true;
+            }, 600);
           });
       },
       nameResetValidation() {
