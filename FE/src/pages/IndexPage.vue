@@ -108,6 +108,7 @@
                   اطلاعات ورود برایتان ارسال خواهد شد.
                 </h2>
                 <q-btn
+                  @click="close"
                   label="خروج"
                   color="pink-7"
                   class="full-width"
@@ -174,6 +175,9 @@ export default defineComponent({
         } else {
           phoneRef.value.validate();
         }
+      },
+      close() {
+        window.close();
       },
     };
   },
