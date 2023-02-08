@@ -10,6 +10,10 @@ export default defineComponent({
 });
 </script>
 <style>
+html,
+body {
+  overscroll-behavior-y: contain !important;
+}
 .bg {
   background: url("bg.webp") no-repeat center top;
   background-size: cover;
@@ -43,5 +47,21 @@ export default defineComponent({
 }
 .q-field__messages div {
   color: black!important;
+}
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .5s
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0
+}
+.scale{
+  width: 420px;
+  height: 450px;
+}
+.noScrollBody {
+  overflow-y: hidden;
 }
 </style>
