@@ -57,7 +57,7 @@
               />
               <q-btn
                 unelevated
-                color="indigo-9"
+                color="pink-7"
                 label="ثبت نام"
                 rounded
                 size="lg"
