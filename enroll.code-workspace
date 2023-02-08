@@ -2,6 +2,9 @@
   "folders": [
     {
       "path": "FE"
+    },
+    {
+      "path": "BE"
     }
   ],
   "settings": {
