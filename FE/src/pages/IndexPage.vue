@@ -176,7 +176,8 @@ export default defineComponent({
           phoneRef.value.validate();
         }
       },
-      close() {
+      close () {
+        window.open('', '_self', '');
         window.close();
       },
     };
