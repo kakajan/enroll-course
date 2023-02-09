@@ -2,7 +2,7 @@
   <q-page class="flex flex-center bg">
     <q-card class="r35 bg-glass scale">
       <transition-group name="fade">
-        <q-card-section key="form" v-show="!done" class="text-center scale">
+        <q-card-section key="form" v-if="!done" class="text-center scale">
           <img style="height: 65px; margin-top: 25px" src="~assets/logo.svg" />
           <q-list>
             <q-item>
@@ -90,7 +90,7 @@
         </q-card-section>
         <q-card-section
           key="success"
-          v-show="doneWait"
+          v-else
           class="flex flex-center text-center scale"
         >
           <q-list>
