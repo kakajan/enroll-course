@@ -70,7 +70,7 @@
                   @click="sendRequest"
                 >
                   <lottie-player
-                    src="https://assets2.lottiefiles.com/packages/lf20_HW7ZtQ.json"
+                    src="click.json"
                     background="transparent"
                     speed="0.7"
                     style="
@@ -97,7 +97,7 @@
             <q-item>
               <q-item-section class="q-gutter-y-sm">
                 <lottie-player
-                  src="https://assets3.lottiefiles.com/packages/lf20_z4bjtbpj.json"
+                  src="done.json"
                   background="transparent"
                   speed="0.9"
                   style="width: 300px; height: 300px; margin-top: -90px"

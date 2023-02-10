@@ -15,7 +15,7 @@ body {
   overscroll-behavior-y: contain !important;
 }
 .bg {
-  background:#28123b url("bg.webp") no-repeat center top;
+  background:#28123b url("/bg.webp") no-repeat center top;
   background-size: cover;
 }
 body {
