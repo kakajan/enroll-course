@@ -123,6 +123,11 @@
         </q-card-section>
       </transition-group>
     </q-card>
+    <div class="full-width text-body1 text-center absolute-bottom q-pb-lg">
+      <a class="text-white" href="https://devcasts.org/?p=3698" target="_blank"
+        >ثبت نام در دوره برنامه نویس فول استک 11</a
+      >
+    </div>
   </q-page>
 </template>
 
