@@ -15,11 +15,11 @@ body {
   overscroll-behavior-y: contain !important;
 }
 .bg {
-  background:#28123b url("/bg.webp") no-repeat center top;
+  background:#181818 url("/bg.webp") no-repeat center top;
   background-size: cover;
 }
 body {
-  background: #28123b
+  background: #181818
 }
 .morabba {
   font-family: "Morabba" !important;
@@ -53,10 +53,10 @@ body {
   border-radius: 56px;
 }
 .q-field__label, .q-field--float .q-field__label{
-  color: rgb(43, 47, 87)
+  color: rgb(255, 255, 255)
 }
 .q-field__messages div {
-  color: black!important;
+  color: rgb(255, 225, 28)!important;
 }
 .fade-enter-active,
 .fade-leave-active {
@@ -68,8 +68,8 @@ body {
     opacity: 0
 }
 .scale{
-  width: 420px;
-  height: 450px;
+  width: 340px;
+  height: 350px;
 }
 .noScrollBody {
   overflow-y: hidden;

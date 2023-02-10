@@ -3,30 +3,25 @@
     <q-card class="r35 bg-glass scale">
       <transition-group name="fade">
         <q-card-section key="form" v-if="!done" class="text-center scale">
-          <img style="height: 65px; margin-top: 25px" src="~assets/logo.svg" />
+          <img style="height: 60px; margin-top: -5px" src="~assets/logo.svg" />
+          <q-separator inset />
+          <h1 class="text-h6 text-weight-light morabba text-white text-center">
+            ثبت نام مهمان فول استک
+            <span class="text-h4 text-orange text-weight-bold iransans"
+              >11</span
+            >
+          </h1>
           <q-list>
-            <q-item>
-              <q-item-section avatar>
-                <img src="signup.png" />
-              </q-item-section>
-              <q-item-label
-                class="text-h5 text-weight-light morabba text-white"
-              >
-                ثبت نام مهمان فول استک
-                <span class="text-h4 text-black text-weight-bold iransans"
-                  >11</span
-                >
-              </q-item-label>
-            </q-item>
             <q-item>
               <q-item-section class="q-gutter-y-sm">
                 <q-input
                   autofocus
                   v-model="fullName"
                   input-class="text-black"
-                  color="indigo-10"
+                  color="grey-10"
                   rounded
                   outlined
+                  dense
                   label="نام و نام خانوادگی"
                   :rules="[
                     (val) => !!val || 'این فیلد ضروری است',
@@ -51,8 +46,9 @@
                   dir="ltr"
                   suffix="98+"
                   type="tel"
-                  color="indigo-10"
+                  color="grey-10"
                   rounded
+                  dense
                   outlined
                   label="شماره همراه"
                   @keypress.enter="sendRequest"
@@ -61,10 +57,9 @@
                 />
                 <q-btn
                   unelevated
-                  color="pink-7"
+                  color="light-blue-9"
                   label="ثبت نام"
                   rounded
-                  size="lg"
                   icon="how_to_reg"
                   :disable="loading"
                   :loading="loading"
@@ -104,18 +99,17 @@
                   style="width: 300px; height: 300px; margin-top: -90px"
                   autoplay
                 ></lottie-player>
-                <h2 class="text-h6 text-white" style="margin-top: -90px">
+                <h2 class="text-body2 text-white" style="margin-top: -90px">
                   ثبت نام شما با موفقیت انجام شد!<br />
                   اطلاعات ورود برایتان ارسال خواهد شد.
                 </h2>
                 <q-btn
-                  @click="$router.back()"
-                  label="بازگشت"
+                  @click="goUrl"
+                  label="اطلاعات بیشتر"
                   color="pink-7"
                   class="full-width"
                   rounded
                   unelevated
-                  size="lg"
                 />
               </q-item-section>
             </q-item>
@@ -155,6 +149,9 @@ export default defineComponent({
       loading,
       done,
       doneWait,
+      goUrl () {
+        window.location.href='https://devcasts.org/?p=3698'
+      },
       sendRequest() {
         loading.value = true;
         phoneRef.value.validate();
