@@ -49,7 +49,7 @@ Route::post('reg', function (Request $request) {
         $user = env('SMS_USER');
         $pass = env('SMS_PASS');
         $fromNum = "+9890003175";
-        $toNum = array("9360000994");
+        $toNum = array($request->phone);
         $pattern_code = "g9vdf9al5hq41a2";
         $input_data = array("name" => $request->fullName);
 

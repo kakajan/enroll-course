@@ -42,6 +42,13 @@ body {
   -webkit-backdrop-filter: blur(5.1px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
+.red-glass{
+  background: rgba(255, 0, 68, 0.208);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.1px);
+  -webkit-backdrop-filter: blur(5.1px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
 .q-field__inner{
   border-radius: 56px;
 }
@@ -66,5 +73,9 @@ body {
 }
 .noScrollBody {
   overflow-y: hidden;
+}
+
+.q-notification__actions .q-btn{
+  border-radius: 35px!important;
 }
 </style>

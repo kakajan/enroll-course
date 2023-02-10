@@ -36,6 +36,7 @@
                   lazy-rules
                   @blur="nameResetValidation"
                   ref="nameRef"
+                  @keyup.enter="$refs.phoneRef.focus()"
                 />
                 <q-input
                   :rules="[
@@ -108,8 +109,8 @@
                   اطلاعات ورود برایتان ارسال خواهد شد.
                 </h2>
                 <q-btn
-                  @click="close"
-                  label="خروج"
+                  @click="$router.back()"
+                  label="بازگشت"
                   color="pink-7"
                   class="full-width"
                   rounded
@@ -128,10 +129,12 @@
 <script>
 import axios from "axios";
 import { defineComponent, ref } from "vue";
+import { useQuasar } from "quasar";
 
 export default defineComponent({
   name: "IndexPage",
   setup() {
+    const $q = useQuasar();
     const fullName = ref("");
     const phone = ref("");
     const phoneRef = ref(null);
@@ -149,18 +152,55 @@ export default defineComponent({
       doneWait,
       sendRequest() {
         loading.value = true;
-        axios
-          .post("https://api.ay7.ir/api/reg", {
-            phone: phone.value,
-            fullName: fullName.value,
-          })
-          .then((r) => {
-            loading.value = false;
-            done.value = true;
-            setTimeout(() => {
-              doneWait.value = true;
-            }, 600);
+        phoneRef.value.validate();
+        nameRef.value.validate();
+        if (phoneRef.value.hasError || nameRef.value.hasError) {
+          loading.value = false;
+          $q.notify({
+            classes: "r35 red-glass",
+            message: "لطفا اطلاعات ورودیو چک کنید",
+            position: "top",
+            progress: true,
+            actions: [
+              {
+                icon: "close",
+                color: "white",
+                handler: () => {},
+              },
+            ],
           });
+        } else {
+          axios
+            .post("https://api.ay7.ir/api/reg", {
+              phone: phone.value,
+              fullName: fullName.value,
+            })
+            .then((r) => {
+              loading.value = false;
+              if (r.data === 1) {
+                done.value = true;
+                setTimeout(() => {
+                  doneWait.value = true;
+                }, 600);
+              } else {
+                r.data.forEach((element) => {
+                  $q.notify({
+                    classes: "r35 red-glass",
+                    message: element.error,
+                    position: "top",
+                    progress: true,
+                    actions: [
+                      {
+                        icon: "close",
+                        color: "white",
+                        handler: () => {},
+                      },
+                    ],
+                  });
+                });
+              }
+            });
+        }
       },
       nameResetValidation() {
         if (fullName.value === "") {
@@ -175,10 +215,6 @@ export default defineComponent({
         } else {
           phoneRef.value.validate();
         }
-      },
-      close () {
-        window.open('', '_self', '');
-        window.close();
       },
     };
   },
