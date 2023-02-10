@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
+    "@quasar/icongenie": "^2.5.4",
     "axios": "^0.21.1",
     "postcss-rtlcss": "^4.0.1",
     "quasar": "^2.6.0",
