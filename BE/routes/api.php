@@ -45,6 +45,16 @@ Route::post('reg', function (Request $request) {
     $guest->phone = $request->phone;
     $guest->save();
     if ($guest) {
+        $client = new SoapClient("http://ippanel.com/class/sms/wsdlservice/server.php?wsdl");
+        $user = env('SMS_USER');
+        $pass = env('SMS_PASS');
+        $fromNum = "+9890003175";
+        $toNum = array("9360000994");
+        $pattern_code = "g9vdf9al5hq41a2";
+        $input_data = array("name" => $request->fullName);
+
+        $client->sendPatternSms($fromNum, $toNum, $user, $pass, $pattern_code, $input_data);
+
         return 1;
     }
 });
